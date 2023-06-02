@@ -13,3 +13,9 @@ class SternmanEngine(Car, ABC):
             return True
         else:
             return False
+
+    def needs_service(self, mileage_threshold):
+        if self.engine_should_be_serviced() >= mileage_threshold:
+            return True
+        else:
+            return False
